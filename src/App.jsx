@@ -5,7 +5,7 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import News from './pages/News'
 import Contact from './pages/Contact'
-import ProjectDetail from './pages/ProjectDetail' // Agregar esta línea
+import ProjectDetail from './pages/ProjectDetail' 
 import NotFound from './pages/NotFound'
 
 function App() {
