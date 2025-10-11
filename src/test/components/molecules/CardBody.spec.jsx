@@ -6,7 +6,6 @@ describe('CardBody Component', () => {
   const mockProps = {
     title: 'Proyecto 1',
     description: 'Descripción del proyecto'
-    // Removemos technologies
   };
 
   it('renderiza el título y descripción del proyecto', () => {
@@ -19,7 +18,6 @@ describe('CardBody Component', () => {
   it('NO renderiza las tecnologías (ahora están en los badges)', () => {
     render(<CardBody {...mockProps} />);
     
-    // Verificar que NO se muestren las tecnologías en el CardBody
     expect(screen.queryByText('React, Node.js')).toBeNull();
   });
 });

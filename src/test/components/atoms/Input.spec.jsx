@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Input from '../../../components/atoms/Input'; // RUTA CORREGIDA
+import Input from '../../../components/atoms/Input';
 
 describe('Input Component', () => {
   it('renderiza un input de texto correctamente', () => {

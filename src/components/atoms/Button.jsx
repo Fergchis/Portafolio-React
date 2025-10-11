@@ -1,4 +1,4 @@
-import React from 'react'; // AGREGAR
+import React from 'react';
 import { Button as BootstrapButton } from 'react-bootstrap';
 
 function Button({ children, ...props }) {

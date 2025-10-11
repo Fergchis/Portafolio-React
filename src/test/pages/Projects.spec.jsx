@@ -15,7 +15,6 @@ describe('Projects Page', () => {
 
   it('renderiza los proyectos desde el JSON', () => {
     renderWithRouter(<Projects />);
-    // CAMBIA los nombres por los REALES de tu JSON
     expect(screen.getByText('kÖzi')).toBeTruthy();
     expect(screen.getByText('Galiana')).toBeTruthy();
     expect(screen.getByText('Experimento Jazz')).toBeTruthy();

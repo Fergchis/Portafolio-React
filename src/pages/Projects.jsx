@@ -1,4 +1,4 @@
-import React from 'react'; // AGREGAR
+import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import projectsData from '../data/projects.json';
 import ProjectCard from '../components/organisms/ProjectCard';

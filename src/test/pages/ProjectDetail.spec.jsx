@@ -3,7 +3,6 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { RouterProvider, createMemoryRouter } from 'react-router-dom';
 
-// Mock de projectsData
 const mockProjects = [
   {
     id: 1,
@@ -15,9 +14,7 @@ const mockProjects = [
   }
 ];
 
-// Mock del componente ProjectDetail
 function MockProjectDetail() {
-  // Simulamos useParams y useNavigate
   const mockId = '1';
   const mockNavigate = () => {};
   const project = mockProjects.find(p => p.id === parseInt(mockId));

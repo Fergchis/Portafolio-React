@@ -10,7 +10,6 @@ function ProjectCard({ project }) {
 
   return (
     <Card style={{ width: '20rem', height: '500px' }} className="m-2 shadow-sm d-flex flex-column">
-      {/* Imagen con altura fija */}
       <div style={{ height: '300px', overflow: 'hidden' }}>
         <Image 
           src={project.image} 
@@ -20,14 +19,11 @@ function ProjectCard({ project }) {
         />
       </div>
       
-      {/* Card Body que ocupa el resto del espacio */}
       <Card.Body className="d-flex flex-column flex-grow-1">
         <CardBody
           title={project.name}
           description={project.description}
         />
-        
-        {/* Contenedor que se empuja hacia abajo */}
         <div className="mt-auto">
           <div className="mb-3">
             {project.technologies.map(tech => (

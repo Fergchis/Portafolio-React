@@ -8,7 +8,7 @@ function About() {
         <Col md={4}>
           <Image 
             src="/img/profile/profile.webp" 
-            alt="Foto de perfil"  // AGREGAR ESTA LÍNEA
+            alt="Foto de perfil"
             fluid 
             rounded 
           />

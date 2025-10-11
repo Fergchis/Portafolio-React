@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import Contact from '../../pages/Contact'; // RUTA CORREGIDA
+import Contact from '../../pages/Contact';
 
 const renderWithRouter = (component) => {
   return render(<BrowserRouter>{component}</BrowserRouter>);
@@ -44,7 +44,6 @@ describe('Contact Page', () => {
     const sendButton = screen.getByText('Enviar Mensaje');
     fireEvent.click(sendButton);
     
-    // Deberían mostrarse mensajes de error para cada campo
     expect(screen.getByText('El nombre es requerido')).toBeTruthy();
     expect(screen.getByText('El email es requerido')).toBeTruthy();
     expect(screen.getByText('El asunto es requerido')).toBeTruthy();
@@ -57,11 +56,9 @@ describe('Contact Page', () => {
     const nameInput = screen.getByPlaceholderText('Ingresa tu nombre completo');
     const clearButton = screen.getByText('Limpiar Formulario');
     
-    // Escribe algo en el input
     fireEvent.change(nameInput, { target: { value: 'Juan' } });
     expect(nameInput.value).toBe('Juan');
     
-    // Limpia el formulario
     fireEvent.click(clearButton);
     expect(nameInput.value).toBe('');
   });

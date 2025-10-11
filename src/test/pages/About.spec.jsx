@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import About from '../../pages/About'; // RUTA CORRECTA
+import About from '../../pages/About';
 
 describe('About Page', () => {
   it('renderiza el título Sobre Mí', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Button from '../../../components/atoms/Button'; // RUTA CORREGIDA
+import Button from '../../../components/atoms/Button';
 
 describe('Button Component', () => {
   it('renderiza el botón correctamente', () => {

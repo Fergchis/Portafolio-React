@@ -14,7 +14,7 @@ describe('ProjectCard Component', () => {
     description: 'Descripción test',
     technologies: ['React', 'Bootstrap'],
     image: 'test.jpg',
-    repoUrl: 'https://github.com/test'  // CAMBIADO: demoUrl → repoUrl
+    repoUrl: 'https://github.com/test'
   };
 
   it('renderiza el nombre del proyecto', () => {
@@ -43,9 +43,9 @@ describe('ProjectCard Component', () => {
     expect(screen.getByText('Ver detalles')).toBeTruthy();
   });
 
-  it('renderiza el botón de proyecto si existe repoUrl', () => {  // CAMBIADO: github → proyecto
+  it('renderiza el botón de proyecto si existe repoUrl', () => { 
     renderWithRouter(<ProjectCard project={mockProject} />);
-    expect(screen.getByText('Ver Proyecto')).toBeTruthy();  // CAMBIADO: "Ver en GitHub" → "Ver Proyecto"
+    expect(screen.getByText('Ver Proyecto')).toBeTruthy(); 
   });
 
   it('renderiza la imagen del proyecto', () => {

@@ -1,4 +1,4 @@
-import React from 'react'; // AGREGAR
+import React from 'react';
 
 function Text({ children, variant = 'p', className }) {
   const Tag = variant;

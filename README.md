@@ -1,3 +1,7 @@
+IMPORTANTE, si el proyecto no funciona hace npm install en el proyecto desde el cmd
+
+Link del proyecto: https://portafolio-react-livid.vercel.app/
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

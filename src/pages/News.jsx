@@ -1,4 +1,4 @@
-import React from 'react'; // AGREGAR
+import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import newsData from '../data/news.json';
 import NewsCard from '../components/organisms/NewsCard';

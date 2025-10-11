@@ -10,7 +10,6 @@ describe('News Page', () => {
 
   it('renderiza las noticias desde el JSON', () => {
     render(<News />);
-    // Cambia estos textos por los títulos reales de tu JSON
     expect(screen.getByText('Estados Unidos sufre el peor ataque terrorista de su historia')).toBeTruthy();
     expect(screen.getByText('Mana, Közi y Kaya llevan su talento a Latinoamérica con conciertos y té')).toBeTruthy();
   });

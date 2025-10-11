@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import DynamicForm from '../../../components/molecules/DynamicForm'; // RUTA CORREGIDA
+import DynamicForm from '../../../components/molecules/DynamicForm';
 
 describe('DynamicForm Component', () => {
   const mockInputs = [

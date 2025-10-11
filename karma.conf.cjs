@@ -1,11 +1,9 @@
-// karma.conf.cjs
 module.exports = function (config) {
   config.set({
     frameworks: ['jasmine'],
     files: [
       'src/test/setupTests.js',
       'src/test/**/*.spec.jsx',
-      // Agregar archivos estáticos de la carpeta public
       { 
         pattern: 'public/**/*', 
         included: false, 
@@ -37,7 +35,6 @@ module.exports = function (config) {
             test: /\.css$/,
             use: ['style-loader', 'css-loader'],
           },
-          // Agregar regla para archivos de imagen
           {
             test: /\.(png|jpg|jpeg|gif|webp|svg)$/i,
             type: 'asset/resource'
@@ -56,7 +53,6 @@ module.exports = function (config) {
     browsers: ['ChromeHeadless'],
     singleRun: true,
     restartOnFileChange: true,
-    // AGREGAR ESTA SECCIÓN DE PROXIES
     proxies: {
       '/img/': '/base/public/img/'
     },
