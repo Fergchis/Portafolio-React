@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "kÖzi",
+    "description": "Plataforma de e-commerce especializada en joyería.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "image": "/images/project1.webp",
+    "repoUrl": "https://github.com/Fergchis/k-zi"
+  },
+  {
+    "id": 2,
+    "name": "Galiana", 
+    "description": "API para plataforma sobre venta de tickets.",
+    "technologies": ["Java"],
+    "image": "/images/project2.webp",
+    "repoUrl": "https://github.com/Fergchis/Galiana"
+  },
+  {
+    "id": 3,
+    "name": "Experimento Jazz",
+    "description": "Plataforma tipo blog para institucion de Jazz.",
+    "technologies": ["MongoDB", "React"],
+    "image": "/images/project3.webp",
+    "repoUrl": "https://github.com/tuusuario/proyecto3"
+  }
+]
