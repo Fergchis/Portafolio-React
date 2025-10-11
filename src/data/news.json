@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "title": "Noticia 1",
-    "date": "2024-01-01",
-    "content": "Contenido breve de la noticia 1."
+    "title": "Estados Unidos sufre el peor ataque terrorista de su historia",
+    "date": "11-09-2001",
+    "content": "El 11 de septiembre de 2001, terroristas de Al Qaeda estrellaron aviones secuestrados contra las Torres Gemelas de Nueva York y el Pentágono, causando su derrumbe y miles de muertes. El presidente Bush lo declaró un 'acto de guerra', iniciando una emergencia nacional y una investigación masiva que marcó el comienzo de la guerra global contra el terrorismo."
   },
   {
     "id": 2, 
-    "title": "Noticia 2",
-    "date": "2024-01-02",
-    "content": "Contenido breve de la noticia 2."
+    "title": "Mana, Közi y Kaya llevan su talento a Latinoamérica con conciertos y té",
+    "date": "07-08-2024",
+    "content": "Los íconos del visual kei Mana, Közi y Kaya se presentaron en Chile y México en septiembre de 2024. El evento incluyó una 'Mana Tea Party' y un concierto acústico de Közi con Kaya como invitado. Las entradas VIP se agotaron, pero en Chile algunas generales seguían disponibles, mientras que en México estaba todo vendido."
   }
 ]

@@ -6,6 +6,7 @@ import Projects from './pages/Projects'
 import News from './pages/News'
 import Contact from './pages/Contact'
 import ProjectDetail from './pages/ProjectDetail' // Agregar esta línea
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/projects/:id" element={<ProjectDetail />} /> {/* Nueva ruta */}
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   )

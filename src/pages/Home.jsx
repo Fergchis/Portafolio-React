@@ -37,10 +37,10 @@ function Home() {
         <Col md={6}>
           <div className="text-center">
             <img 
-              src="https://via.placeholder.com/400" 
+              src="/img/profile/profile.webp" 
               alt="Foto de perfil" 
               className="img-fluid rounded-circle"
-              style={{ maxWidth: '300px' }}
+              style={{ maxWidth: '400px' }}
             />
           </div>
         </Col>

@@ -23,13 +23,24 @@ function ProjectDetail() {
     <Container className="my-5">
       <Row>
         <Col md={6}>
-          <Image 
-            src={project.image} 
-            alt={project.name} 
-            fluid 
-            className="rounded shadow"
-            style={{ maxHeight: '400px', objectFit: 'cover', width: '100%' }}
-          />
+          <div 
+            className="rounded shadow d-flex justify-content-center align-items-center"
+            style={{ 
+              height: '400px', 
+              backgroundColor: '#f8f9fa',
+              overflow: 'hidden'
+            }}
+          >
+            <Image 
+              src={project.image} 
+              alt={project.name} 
+              style={{ 
+                maxHeight: '100%', 
+                maxWidth: '100%', 
+                objectFit: 'scale-down' 
+              }}
+            />
+          </div>
         </Col>
         <Col md={6}>
           <h1 className="mb-4">{project.name}</h1>

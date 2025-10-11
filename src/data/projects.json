@@ -4,23 +4,23 @@
     "name": "kÖzi",
     "description": "Plataforma de e-commerce especializada en joyería.",
     "technologies": ["HTML", "CSS", "JavaScript"],
-    "image": "/images/project1.webp",
+    "image": "/img/projects/kÖziProject.webp",
     "repoUrl": "https://github.com/Fergchis/k-zi"
   },
   {
     "id": 2,
     "name": "Galiana", 
     "description": "API para plataforma sobre venta de tickets.",
-    "technologies": ["Java"],
-    "image": "/images/project2.webp",
+    "technologies": ["Java", "Spring", "MySql"],
+    "image": "/img/projects/GalianaProject.webp",
     "repoUrl": "https://github.com/Fergchis/Galiana"
   },
   {
     "id": 3,
     "name": "Experimento Jazz",
     "description": "Plataforma tipo blog para institucion de Jazz.",
-    "technologies": ["MongoDB", "React"],
-    "image": "/images/project3.webp",
-    "repoUrl": "https://github.com/tuusuario/proyecto3"
+    "technologies": ["HTML", "CSS", "JavaScript", "Python"],
+    "image": "/img/projects/ExpJazzProject.webp",
+    "repoUrl": "https://github.com/Hokington/experimento-jazz"
   }
 ]
