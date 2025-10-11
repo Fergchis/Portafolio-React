@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Button, Image, Badge } from 'react-bootstrap';
 import { useParams, useNavigate } from 'react-router-dom';
 import projectsData from '../data/projects.json';
+import NotFound from './NotFound'
 
 function ProjectDetail() {
   const { id } = useParams();
@@ -9,14 +10,7 @@ function ProjectDetail() {
   const project = projectsData.find(p => p.id === parseInt(id));
 
   if (!project) {
-    return (
-      <Container className="my-5">
-        <h1>Proyecto no encontrado</h1>
-        <Button variant="primary" onClick={() => navigate('/projects')}>
-          Volver a Proyectos
-        </Button>
-      </Container>
-    );
+    return <NotFound />;
   }
 
   return (
