@@ -129,19 +129,6 @@ function Contact() {
           Limpiar Formulario
         </Button>
       </div>
-
-      <div className="mt-5">
-        <Text variant="h3" className="h5">Información de Contacto</Text>
-        <Text variant="p" className="mb-1">
-          <strong>Email:</strong> luc.huerta@duocuc.cl
-        </Text>
-        <Text variant="p" className="mb-1">
-          <strong>Teléfono:</strong> +56 9 1234 5678
-        </Text>
-        <Text variant="p">
-          <strong>Ubicación:</strong> Santiago, Chile
-        </Text>
-      </div>
     </Container>
   );
 }
