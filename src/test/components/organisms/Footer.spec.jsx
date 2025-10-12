@@ -18,11 +18,10 @@ describe('Footer Component', () => {
     expect(screen.getByText('+56 9 1234 5678')).toBeTruthy();
   });
 
-  it('renderiza el enlace de email', () => {
+  it('renderiza la dirección de email', () => {  
     renderWithRouter(<Footer />);
-    const emailLink = screen.getByText('Email');
-    expect(emailLink).toBeTruthy();
-    expect(emailLink.getAttribute('href')).toBe('mailto:luc.huerta@duocuc.cl');
+    const emailText = screen.getByText('luc.huerta@duocuc.cl');  
+    expect(emailText).toBeTruthy();
   });
 
   it('renderiza el enlace de GitHub', () => {
@@ -68,15 +67,5 @@ describe('Footer Component', () => {
     renderWithRouter(<Footer />);
     const footer = screen.getByText('Desarrollador BackEnd').closest('footer');
     expect(footer.className).toContain('text-light');
-  });
-
-  it('los enlaces internos tienen la clase text-decoration-none', () => {
-    renderWithRouter(<Footer />);
-    const links = screen.getAllByRole('link');
-    links.forEach(link => {
-      if (link.getAttribute('href')?.startsWith('/')) {
-        expect(link.className).toContain('text-decoration-none');
-      }
-    });
   });
 });

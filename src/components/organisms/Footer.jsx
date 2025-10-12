@@ -20,9 +20,7 @@ function Footer() {
                   </div>
                   <div className="d-flex align-items-center">
                     <span className="me-1">✉️</span>
-                    <a href="mailto:luc.huerta@duocuc.cl" className="text-light text-decoration-none">
-                      Email
-                    </a>
+                    <span>luc.huerta@duocuc.cl</span>
                   </div>
                 </div>
               </div>

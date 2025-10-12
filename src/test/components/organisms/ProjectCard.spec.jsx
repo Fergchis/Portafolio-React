@@ -13,7 +13,7 @@ describe('ProjectCard Component', () => {
     name: 'Proyecto Test',
     description: 'Descripción test',
     technologies: ['React', 'Bootstrap'],
-    image: '/img/projects/kÖzlProject.webp',
+    image: '/img/projects/kÖziProject.webp',
     repoUrl: 'https://github.com/test'
   };
 
@@ -52,6 +52,6 @@ describe('ProjectCard Component', () => {
     renderWithRouter(<ProjectCard project={mockProject} />);
     const image = screen.getByAltText('Proyecto Test');
     expect(image).toBeTruthy();
-    expect(image.getAttribute('src')).toBe('/img/projects/kÖzlProject.webp');
+    expect(image.getAttribute('src')).toBe('/img/projects/kÖziProject.webp');
   });
 });
