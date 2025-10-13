@@ -17,22 +17,22 @@ function Home() {
             Desarrollador BackEnd ansioso por crear soluciones innovadoras 
             y experiencias digitales excepcionales.
           </Text>
+
           <div className="d-flex gap-3">
             <Button 
-              variant="primary" 
-              size="lg"
+              className="btn-custom btn-lg"    // Ya está correcto
               onClick={() => navigate('/projects')}
             >
               Ver Mis Proyectos
             </Button>
             <Button 
-              variant="outline-secondary" 
-              size="lg"
+              className="btn-outline-custom btn-lg"  // Cambiar a clase personalizada
               onClick={() => navigate('/contact')}
             >
               Contáctame
             </Button>
           </div>
+
         </Col>
         <Col md={6}>
           <div className="text-center">

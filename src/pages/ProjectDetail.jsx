@@ -15,62 +15,63 @@ function ProjectDetail() {
 
   return (
     <Container className="my-5">
-      <Row>
-        <Col md={6}>
-          <div 
-            className="rounded shadow d-flex justify-content-center align-items-center"
-            style={{ 
-              height: '400px', 
-              backgroundColor: '#f8f9fa',
-              overflow: 'hidden'
-            }}
-          >
-            <Image 
-              src={project.image} 
-              alt={project.name} 
+      <div className="project-detail-container"> {/* Nuevo contenedor con estilos */}
+        <Row>
+          <Col md={6}>
+            <div 
+              className="rounded shadow d-flex justify-content-center align-items-center project-image-container" // Agregar clase
               style={{ 
-                maxHeight: '100%', 
-                maxWidth: '100%', 
-                objectFit: 'scale-down' 
+                height: '400px', 
+                overflow: 'hidden'
               }}
-            />
-          </div>
-        </Col>
-        <Col md={6}>
-          <h1 className="mb-4">{project.name}</h1>
-          <p className="lead mb-4">{project.description}</p>
-          
-          <div className="mb-4">
-            <h5>Tecnologías utilizadas:</h5>
-            <div>
-              {project.technologies.map(tech => (
-                <Badge key={tech} bg="primary" className="me-2 mb-2" style={{ fontSize: '0.9rem' }}>
-                  {tech}
-                </Badge>
-              ))}
-            </div>
-          </div>
-
-          <div className="d-flex gap-3">
-            {project.repoUrl && (
-              <Button 
-                variant="primary" 
-                size="lg"
-                onClick={() => window.open(project.repoUrl, '_blank')}
-              >
-                Ver en GitHub
-              </Button>
-            )}
-            <Button 
-              variant="outline-secondary" 
-              size="lg"
-              onClick={() => navigate('/projects')}
             >
-              Volver a Proyectos
-            </Button>
-          </div>
-        </Col>
-      </Row>
+              <Image 
+                src={project.image} 
+                alt={project.name} 
+                style={{ 
+                  maxHeight: '100%', 
+                  maxWidth: '100%', 
+                  objectFit: 'scale-down' 
+                }}
+              />
+            </div>
+          </Col>
+          <Col md={6}>
+            <h1 className="mb-4">{project.name}</h1>
+            <p className="lead mb-4">{project.description}</p>
+            
+            <div className="mb-4">
+              <h5>Tecnologías utilizadas:</h5>
+              <div>
+                {project.technologies.map(tech => (
+                  <Badge key={tech} className="me-2 mb-2"> {/* Quitar bg="primary" */}
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+
+            <div className="d-flex gap-3">
+              {project.repoUrl && (
+                <Button 
+                  className="btn-custom" // Cambiar a clase personalizada
+                  size="lg"
+                  onClick={() => window.open(project.repoUrl, '_blank')}
+                >
+                  Ver en GitHub
+                </Button>
+              )}
+              <Button 
+                className="btn-outline-custom" // Cambiar a clase personalizada
+                size="lg"
+                onClick={() => navigate('/projects')}
+              >
+                Volver a Proyectos
+              </Button>
+            </div>
+          </Col>
+        </Row>
+      </div>
     </Container>
   );
 }

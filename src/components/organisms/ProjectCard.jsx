@@ -9,7 +9,8 @@ function ProjectCard({ project }) {
   const navigate = useNavigate();
 
   return (
-    <Card style={{ width: '20rem', height: '500px' }} className="m-2 shadow-sm d-flex flex-column">
+    <Card style={{ width: '20rem', height: '500px' }} 
+      className="m-2 shadow-sm d-flex flex-column project-card-custom">
       <div style={{ height: '300px', overflow: 'hidden' }}>
         <Image 
           src={project.image} 
@@ -34,14 +35,14 @@ function ProjectCard({ project }) {
           </div>
           <div className="d-grid gap-2">
             <Button 
-              variant="primary" 
+              className="btn-custom"  // Cambiado a clase personalizada
               onClick={() => navigate(`/projects/${project.id}`)}
             >
               Ver detalles
             </Button>
             {project.repoUrl && (
               <Button 
-                variant="outline-primary" 
+                className="btn-outline-custom"  // Cambiado a outline personalizado
                 size="sm"
                 onClick={() => window.open(project.repoUrl, '_blank')}
               >

@@ -15,33 +15,34 @@ function NewsDetail() {
 
   return (
     <Container className="my-5">
-      <Row className="justify-content-center">
-        <Col lg={8}>
-          <div className="mb-4">
-            <Button variant="outline-secondary" onClick={() => navigate('/news')}>
-              ← Volver a Noticias
-            </Button>
-          </div>
+      <div className="news-detail-container"> {/* Nuevo contenedor con estilos */}
+        <Row className="justify-content-center">
+          <Col lg={8}>
+            <div className="mb-4">
+              <Button 
+                className="btn-outline-custom" // Cambiar a clase personalizada
+                onClick={() => navigate('/news')}
+              >
+                ← Volver a Noticias
+              </Button>
+            </div>
 
-          <div className="mb-3">
-            <Badge bg="primary" style={{ fontSize: '1rem' }}>
-              {news.date}
-            </Badge>
-          </div>
+            <div className="mb-3">
+              <Badge className="news-date-badge"> {/* Quitar bg="primary" */}
+                {news.date}
+              </Badge>
+            </div>
 
-          <h1 className="mb-4">{news.title}</h1>
+            <h1 className="mb-4">{news.title}</h1>
 
-          <div className="bg-light p-4 rounded">
-            <p style={{ 
-              fontSize: '1.1rem', 
-              lineHeight: '1.6', 
-              whiteSpace: 'pre-line' 
-            }}>
-              {news.content}
-            </p>
-          </div>
-        </Col>
-      </Row>
+            <div className="p-4 rounded news-content"> {/* Cambiar a news-content */}
+              <p>
+                {news.content}
+              </p>
+            </div>
+          </Col>
+        </Row>
+      </div>
     </Container>
   );
 }

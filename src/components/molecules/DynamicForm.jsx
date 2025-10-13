@@ -9,9 +9,9 @@ function DynamicForm({ inputs = [], onSubmit }) {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} className="dynamic-form-custom"> {/* Agregar clase */}
       {inputs.map((input, index) => (
-        <Form.Group key={input.id || index} className="mb-3"> {/* REMOVER controlId */}
+        <Form.Group key={input.id || index} className="mb-3">
           {input.label && <Form.Label>{input.label}</Form.Label>}
           <Input {...input} />
         </Form.Group>

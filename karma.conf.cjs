@@ -1,14 +1,23 @@
+// Eliminar completamente el warning de deprecación
+const originalEmit = process.emit;
+process.emit = function (name, data, ...args) {
+  if (name === 'warning' && data.name === 'DeprecationWarning') {
+    return false; // Suprime completamente el warning
+  }
+  return originalEmit.apply(process, arguments);
+};
+
 module.exports = function (config) {
   config.set({
     frameworks: ['jasmine'],
     files: [
       'src/test/setupTests.js',
       'src/test/**/*.spec.jsx',
-      { 
-        pattern: 'public/**/*', 
-        included: false, 
+      {
+        pattern: 'public/**/*',
+        included: false,
         served: true,
-        watched: false 
+        watched: false
       }
     ],
     preprocessors: {
@@ -17,6 +26,7 @@ module.exports = function (config) {
     },
     webpack: {
       mode: 'development',
+      cache: true,
       module: {
         rules: [
           {
@@ -33,11 +43,33 @@ module.exports = function (config) {
           },
           {
             test: /\.css$/,
-            use: ['style-loader', 'css-loader'],
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  url: {
+                    filter: (url, resourcePath) => {
+                      if (url.includes('/fonts/')) {
+                        return false;
+                      }
+                      return true;
+                    },
+                  },
+                },
+              },
+            ],
           },
           {
             test: /\.(png|jpg|jpeg|gif|webp|svg)$/i,
             type: 'asset/resource'
+          },
+          {
+            test: /\.(woff|woff2|ttf|eot)$/i,
+            type: 'asset/resource',
+            generator: {
+              filename: 'fonts/[hash][ext][query]'
+            }
           }
         ],
       },
@@ -45,22 +77,22 @@ module.exports = function (config) {
         extensions: ['.js', '.jsx'],
       },
     },
-    reporters: ['progress', 'kjhtml', 'coverage'],
-    coverageReporter: {
-      type: 'html',
-      dir: 'coverage/',
-    },
+    reporters: ['progress', 'kjhtml'],
     browsers: ['ChromeHeadless'],
     singleRun: true,
     restartOnFileChange: true,
+    captureTimeout: 60000,
+    browserDisconnectTimeout: 10000,
+    browserDisconnectTolerance: 3,
+    browserNoActivityTimeout: 60000,
     proxies: {
-      '/img/': '/base/public/img/'
+      '/img/': '/base/public/img/',
+      '/fonts/': '/base/public/fonts/'
     },
     plugins: [
       'karma-jasmine',
       'karma-webpack',
       'karma-chrome-launcher',
-      'karma-coverage',
       'karma-jasmine-html-reporter'
     ]
   });

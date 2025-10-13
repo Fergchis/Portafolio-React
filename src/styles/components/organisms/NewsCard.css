@@ -1,0 +1,33 @@
+.news-card-custom {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+}
+
+.news-card-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.news-card-custom .card-body {
+  color: #dfaff5;
+}
+
+.news-card-custom .card-title {
+  color: white;
+}
+
+.news-card-custom .card-text {
+  color: #e2e8f0;
+}
+
+.news-card-custom .text-primary {
+  color: #dfaff5 !important;
+}
+
+.news-card-custom .text-muted {
+  color: #c084fc !important;
+}
+
+.news-card-custom small.text-primary {
+  color: #dfaff5 !important;
+}

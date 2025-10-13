@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/organisms/Navbar'
-import Footer from './components/organisms/Footer' // ← Agregar esta línea
+import Footer from './components/organisms/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
@@ -9,12 +9,13 @@ import Contact from './pages/Contact'
 import NewsDetail from './pages/NewsDetail'
 import ProjectDetail from './pages/ProjectDetail'
 import NotFound from './pages/NotFound'
+import './styles/global.css'
 
 function App() {
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div className="d-flex flex-column main-background">
       <NavBar />
-      <main className="flex-grow-1">
+      <main className="flex-grow-1" style={{ marginTop: '90px' }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -26,7 +27,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <Footer />
+      <Footer /> {/* Ya está correcto con mt-auto */}
     </div>
   )
 }

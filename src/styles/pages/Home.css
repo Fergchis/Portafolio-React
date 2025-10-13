@@ -1,0 +1,10 @@
+/* Estilos específicos para Home */
+.hero-section h1 {
+  color: #df117f91;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-section .lead {
+  color: #1c9bb89c;
+  font-size: 1.25rem;
+}

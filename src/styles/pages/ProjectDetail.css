@@ -1,0 +1,24 @@
+.project-detail-container h1 {
+  color: white;
+}
+
+.project-detail-container .lead {
+  color: #dfaff5;
+}
+
+.project-detail-container h5 {
+  color: white;
+}
+
+.project-image-container {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+}
+
+.project-detail-container .badge {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  color: white !important;
+  border: 1px solid #dfaff5;
+  font-size: 0.9rem;
+}

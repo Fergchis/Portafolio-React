@@ -1,0 +1,9 @@
+.dynamic-form-custom .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.dynamic-form-custom .form-label {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}

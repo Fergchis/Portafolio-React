@@ -57,15 +57,15 @@ describe('Footer Component', () => {
     expect(screen.getByText('Todos los derechos reservados')).toBeTruthy();
   });
 
-  it('tiene la clase bg-dark para el fondo', () => {
+  it('tiene la clase footer-custom para los estilos personalizados', () => {
     renderWithRouter(<Footer />);
     const footer = screen.getByText('Desarrollador BackEnd').closest('footer');
-    expect(footer.className).toContain('bg-dark');
+    expect(footer.className).toContain('footer-custom');
   });
 
-  it('tiene la clase text-light para el color del texto', () => {
+  it('tiene la clase mt-auto para el margen superior automático', () => {
     renderWithRouter(<Footer />);
     const footer = screen.getByText('Desarrollador BackEnd').closest('footer');
-    expect(footer.className).toContain('text-light');
+    expect(footer.className).toContain('mt-auto');
   });
 });

@@ -108,26 +108,36 @@ function Contact() {
 
   return (
     <Container className="my-5">
-      <Text variant="h1" className="mb-4">Contacto</Text>
-      <Text variant="p" className="mb-4">
-        ¿Quieres trabajar conmigo? ¡No dudes en contactarme!
-      </Text>
-      
-      {showAlert && (
-        <Alert variant="success" className="mb-4">
-          ¡Gracias por tu mensaje! Te responderé pronto.
-        </Alert>
-      )}
+      <div className="contact-container"> {/* Nuevo contenedor con estilos */}
+        <Text variant="h1" className="mb-4">Contacto</Text>
+        <Text variant="p" className="mb-4">
+          ¿Quieres trabajar conmigo? ¡No dudes en contactarme!
+        </Text>
+        
+        {showAlert && (
+          <Alert variant="success" className="mb-4 contact-alert"> {/* Agregar clase */}
+            ¡Gracias por tu mensaje! Te responderé pronto.
+          </Alert>
+        )}
 
-      <DynamicForm inputs={formInputs} onSubmit={handleSubmit} />
-      
-      <div className="mt-4">
-        <Button variant="primary" onClick={handleSubmit} className="me-2">
-          Enviar Mensaje
-        </Button>
-        <Button variant="outline-secondary" onClick={handleClear}>
-          Limpiar Formulario
-        </Button>
+        <div className="contact-form"> {/* Envolver el formulario */}
+          <DynamicForm inputs={formInputs} onSubmit={handleSubmit} />
+        </div>
+        
+        <div className="mt-4">
+          <Button 
+            className="btn-custom me-2"  
+            onClick={handleSubmit}
+          >
+            Enviar Mensaje
+          </Button>
+          <Button 
+            className="btn-outline-custom"  
+            onClick={handleClear}
+          >
+            Limpiar Formulario
+          </Button>
+        </div>
       </div>
     </Container>
   );

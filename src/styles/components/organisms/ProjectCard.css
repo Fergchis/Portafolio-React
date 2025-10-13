@@ -1,0 +1,26 @@
+.project-card-custom {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+}
+
+.project-card-custom .card-body {
+  color: #dfaff5;
+}
+
+.project-card-custom .card-title {
+  color: white;
+}
+
+.project-card-custom .card-text {
+  color: #e2e8f0;
+}
+
+/* ELIMINADO: Estilos de botones duplicados */
+
+/* Badges con fondo morado claro y texto blanco */
+.project-card-custom .badge {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  color: white !important;
+  border: 1px solid #dfaff5;
+}

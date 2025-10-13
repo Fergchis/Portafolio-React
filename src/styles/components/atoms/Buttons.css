@@ -1,0 +1,23 @@
+/* Botón morado oscuro elegante - ESTILOS BASE */
+.btn.btn-custom {
+  background-color: #7e22ce !important;
+  border-color: #7e22ce !important;
+  color: white !important;
+}
+
+.btn.btn-custom:hover {
+  background-color: #6b21a8 !important;
+  border-color: #6b21a8 !important;
+}
+
+/* Variante outline para el botón secundario */
+.btn.btn-outline-custom {
+  background-color: transparent !important;
+  border-color: #dfaff5 !important;
+  color: #dfaff5 !important;
+}
+
+.btn.btn-outline-custom:hover {
+  background-color: #ffffff !important;
+  color: #581c87 !important;
+}

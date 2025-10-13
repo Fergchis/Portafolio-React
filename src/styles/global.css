@@ -1,6 +1,43 @@
-.min-vh-50 {
-  min-height: 50vh;
+/* ===== IMPORTS ESTRUCTURADOS POR CAPAS ATOMIC DESIGN ===== */
+
+/* ÁTOMOS */
+@import './components/atoms/Text.css';
+@import './components/atoms/Buttons.css';
+
+/* MOLÉCULAS */
+@import './components/molecules/DynamicForm.css';
+
+/* ORGANISMOS */
+@import './components/organisms/Navbar.css';
+@import './components/organisms/Footer.css';
+@import './components/organisms/ProjectCard.css';
+@import './components/organisms/NewsCard.css';
+
+/* PÁGINAS */
+@import './pages/Home.css';
+@import './pages/Contact.css';
+@import './pages/ProjectDetail.css';
+@import './pages/NewsDetail.css';
+
+/* ===== FONDO PRINCIPAL ===== */
+.main-background {
+  background: url('/img/background/fondo2.webp') no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 120vh;
 }
+
+.content-overlay {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+/* ===== UTILIDADES ===== */
+.min-vh-50 { min-height: 50vh; }
 
 .card-hover {
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -11,21 +48,32 @@
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-/* Mejoras de responsividad */
+/* ===== RESPONSIVIDAD ===== */
 @media (max-width: 768px) {
-  .display-4 {
-    font-size: 2rem;
-  }
+  .display-4 { font-size: 2rem; }
 }
 
-/* Estilos para el formulario */
+/* ===== ESTILOS FORMULARIO BASE ===== */
 .form-control:focus {
   border-color: #0d6efd;
   box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
 }
 
-/* Mejoras visuales generales */
+/* ===== FUENTES ===== */
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-Full-Version/WebFonts/Rubik/Rubik-Medium.woff2') format('woff2'),
+       url('/fonts/Rubik-Full-Version/WebFonts/Rubik/Rubik-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Aplicar a todos los elementos relevantes */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, div {
+  font-family: 'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

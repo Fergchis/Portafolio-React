@@ -6,20 +6,21 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dark text-light mt-auto">
-      <Container className="py-3">
-        <Row className="g-3">
-          <Col md={6} lg={5}>
-            <div className="d-flex flex-column h-50">
-              <h6 className="fw-bold mb-2">Desarrollador BackEnd</h6>
+    <footer className="footer-custom mt-auto">
+      <Container className="py-4">
+        <Row className="g-4 align-items-center">
+          {/* Columna Información de Contacto */}
+          <Col md={4} lg={4}>
+            <div className="d-flex flex-column h-100">
+              <h6 className="fw-bold mb-3">Desarrollador BackEnd</h6>
               <div className="mt-auto">
-                <div className="d-flex flex-wrap gap-3 small">
-                  <div className="d-flex align-items-center">
-                    <span className="me-1">📞</span>
+                <div className="d-flex flex-column flex-md-row flex-wrap gap-3 small contact-info">
+                  <div className="d-flex align-items-center justify-content-center justify-content-md-start">
+                    <span className="me-2">📞</span>
                     <span>+56 9 1234 5678</span>
                   </div>
-                  <div className="d-flex align-items-center">
-                    <span className="me-1">✉️</span>
+                  <div className="d-flex align-items-center justify-content-center justify-content-md-start">
+                    <span className="me-2">✉️</span>
                     <span>luc.huerta@duocuc.cl</span>
                   </div>
                 </div>
@@ -27,39 +28,45 @@ function Footer() {
             </div>
           </Col>
 
-          <Col md={6} lg={4}>
-            <h6 className="fw-bold mb-2">Enlaces</h6>
-            <div className="d-flex flex-wrap gap-3 small">
-              <Link to="/" className="text-light text-decoration-none">
-                Inicio
-              </Link>
-              <Link to="/about" className="text-light text-decoration-none">
-                Sobre mí
-              </Link>
-              <Link to="/projects" className="text-light text-decoration-none">
-                Proyectos
-              </Link>
-              <Link to="/contact" className="text-light text-decoration-none">
-                Contacto
-              </Link>
-              <a 
-                href="https://github.com/Fergchis" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-light text-decoration-none"
-              >
-                GitHub
-              </a>
+          {/* Columna Enlaces - Centrada */}
+          <Col md={4} lg={4}>
+            <div className="text-center">
+              <h6 className="fw-bold mb-3">Enlaces Rápidos</h6>
+              <div className="d-flex flex-wrap justify-content-center gap-3 small">
+                <Link to="/" className="text-decoration-none">
+                  Inicio
+                </Link>
+                <Link to="/about" className="text-decoration-none">
+                  Sobre mí
+                </Link>
+                <Link to="/projects" className="text-decoration-none">
+                  Proyectos
+                </Link>
+                <Link to="/contact" className="text-decoration-none">
+                  Contacto
+                </Link>
+                <a 
+                  href="https://github.com/Fergchis" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-decoration-none"
+                >
+                  GitHub
+                </a>
+              </div>
             </div>
           </Col>
 
-          <Col lg={3} className="text-lg-end">
-            <div className="d-flex flex-column h-100 justify-content-between">
+          {/* Columna Copyright - Texto más pequeño */}
+          <Col md={4} lg={4}>
+            <div className="d-flex flex-column h-100 justify-content-between text-center text-md-end">
               <div>
-                <p className="small text-light mb-0">
+                <p className="small mb-1" style={{ fontSize: '0.64rem' }}> {/* Más pequeño */}
                   &copy; {currentYear} Lucas Huerta
                 </p>
-                <p className="small text-light mb-0">Todos los derechos reservados</p>
+                <p className="small mb-0" style={{ fontSize: '0.64rem' }}> {/* Más pequeño */}
+                  Todos los derechos reservados
+                </p>
               </div>
             </div>
           </Col>

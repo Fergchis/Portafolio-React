@@ -1,0 +1,25 @@
+.footer-custom h6 {
+  color: #dfaff5 !important;
+  font-weight: bold;
+}
+
+.footer-custom .text-light {
+  color: white !important;
+}
+
+.footer-custom a {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.footer-custom a:hover {
+  color: #dfaff5 !important;
+  text-decoration: none !important;
+}
+
+/* Estilo específico para los textos de contacto */
+.footer-custom .contact-info span {
+  color: white !important;
+}
+
+/* ELIMINADO: Reglas duplicadas */
