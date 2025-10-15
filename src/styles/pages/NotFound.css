@@ -1,0 +1,41 @@
+.not-found-container {
+  background: linear-gradient(145deg, #581c87 0%, #c026d3 100%);
+  border: 1px solid #e879f9;
+  border-radius: 12px;
+  padding: 2rem;
+  color: white;
+}
+
+.not-found-container .display-1 {
+  color: white !important;
+}
+
+.not-found-container .h1 {
+  color: white !important;
+}
+
+.not-found-container .lead {
+  color: #dfaff5 !important;
+}
+
+.not-found-container .btn-primary {
+  background-color: #7e22ce !important;
+  border-color: #7e22ce !important;
+  color: white !important;
+}
+
+.not-found-container .btn-primary:hover {
+  background-color: #6b21a8 !important;
+  border-color: #6b21a8 !important;
+}
+
+.not-found-container .btn-outline-primary {
+  background-color: transparent !important;
+  border-color: #dfaff5 !important;
+  color: #dfaff5 !important;
+}
+
+.not-found-container .btn-outline-primary:hover {
+  background-color: #ffffff !important;
+  color: #581c87 !important;
+}

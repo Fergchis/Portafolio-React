@@ -7,7 +7,7 @@ function NotFound() {
   const navigate = useNavigate();
 
   return (
-    <Container className="my-5">
+    <Container className="my-5 not-found-container"> {/* Agregar clase aquí */}
       <Row className="justify-content-center text-center">
         <Col md={8} lg={6}>
           <h1 className="display-1 fw-bold text-primary mb-0">404</h1>

@@ -18,6 +18,7 @@
 @import './pages/Contact.css';
 @import './pages/ProjectDetail.css';
 @import './pages/NewsDetail.css';
+@import './pages/NotFound.css';
 
 /* ===== FONDO PRINCIPAL ===== */
 .main-background {
